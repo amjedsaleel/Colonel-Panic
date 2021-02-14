@@ -1,0 +1,39 @@
+* {
+  font-family: "Montserrat", sans-serif;
+  padding: 0;
+  margin: 0;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  text-decoration: none;
+  color: inherit;
+}
+.icons {
+  color: orange;
+
+  padding: 5px;
+  margin-left: 15px;
+  margin-right: 10px;
+}
+.material-icons {
+  font-size: 28px !important;
+}
+.backup_outlined {
+  font-size: 40px !important;
+}
+
+.upload {
+  border: 1px solid grey;
+  border-radius: 5px;
+
+  height: 90px;
+}
+
+.submit {
+  display: block;
+  margin: 10px auto;
+}
