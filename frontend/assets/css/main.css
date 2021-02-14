@@ -37,3 +37,12 @@ a:hover {
   display: block;
   margin: 10px auto;
 }
+.center {
+  margin: 10px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.donate {
+  margin-left: -20px;
+}
