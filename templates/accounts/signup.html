@@ -14,36 +14,38 @@
             <div class="col-md-7 my-auto">
                 <div class="signin mx-auto my-auto" style="width:80%">
                     <h4 class="heading">Sign Up</h4>
-                    <form>
+
+                    {% include 'includes/messages.html' %}
+                    <form action="{% url 'accounts:register' %}" method="post">
+                        {% csrf_token %}
                         <div class="form-group">
 
                             <input type="text" class="form-control emailField" id="exampleInputEmail1"
-                                   placeholder="Username">
+                                   placeholder="Username" name="username">
 
                         </div>
                         <div class="form-group">
 
                             <input type="email" class="form-control emailField" id="exampleInputEmail1"
-                                   aria-describedby="emailHelp" placeholder="abc@test.com">
+                                   aria-describedby="emailHelp" placeholder="abc@test.com" name="email">
 
                         </div>
                         <div class="form-group">
 
                             <input type="password" class="form-control passwordField" id="exampleInputPassword1"
-                                   placeholder="Password">
+                                   placeholder="Password" name="password1">
                         </div>
                         <div class="form-group">
 
                             <input type="password" class="form-control passwordField" id="exampleInputPassword1"
-                                   placeholder="Confirm Password">
+                                   placeholder="Confirm Password" name="password2">
                         </div>
                         <div class="mx-auto">
-                            <button class="btn btn-primary login"><a href="./home.html" class="login">Sign
-                                Up</a></button>
-                            <p class="heading mt-3">Already have an account? Log in <span class="here"
-                                                                                          style="color: rgb(83, 83, 253); font-weight: 800;"> <a
-                                    href="./login.html">
-                                        HERE</span></a></p>
+                            <input type="submit" class="btn btn-primary login" value="Sign Up">
+                            <p class="heading mt-3">Already have an account? Login <span class="here"
+                                                                                         style="color: rgb(83, 83, 253); font-weight: 800;"><a
+                                    href="{% url 'accounts:login' %}">
+                                        HERE</a></span></p>
                         </div>
                     </form>
                 </div>
