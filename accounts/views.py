@@ -18,7 +18,7 @@ def login(request):
         if user is not None:
             auth.login(request, user)
             messages.success(request, 'you are logged in')
-            return redirect('accounts:login')
+            return redirect('startup:home')
         else:
             messages.error(request, 'invalid credentials')
             return redirect('accounts:login')
@@ -50,6 +50,7 @@ def register(request):
             )
             user.save()
             messages.success(request, 'Account created Successfully')
+            return redirect('accounts:login')
 
         else:
             context = {'username': username, 'email': email}

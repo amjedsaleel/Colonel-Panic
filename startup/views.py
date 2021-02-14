@@ -1,8 +1,16 @@
 from django.shortcuts import render
+from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 
 
-def startup(request):
-    return render(request, 'startup/startup.html')
+def index(request):
+    return render(request, 'index.html')
 
+@login_required()
+def home(request):
+    return render(request, 'startup/home.html')
+
+
+def profile(request):
+    return render(request, 'startup/profile.html')
