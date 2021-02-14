@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block navbar %}
+    {% include 'includes/navbar.html' %}
+{% endblock %}
+{% block content %}
+    <div class="container">
+
+        <div class="row mt-5">
+            <div class="col-md-5  mx-auto">
+
+                <img src="{% static 'images/left-image.png' %}" width="80%" alt="">
+            </div>
+            <div class="col-md-7 my-auto">
+                <div class="signin mx-auto my-auto" style="width:80%">
+                    <h4 class="heading">Sign In</h4>
+                    <form>
+                        <div class="form-group">
+
+                            <input type="email" class="form-control emailField" id="exampleInputEmail1"
+                                   aria-describedby="emailHelp" placeholder="abc@test.com">
+
+                        </div>
+                        <div class="form-group">
+
+                            <input type="password" class="form-control passwordField" id="exampleInputPassword1"
+                                   placeholder="Password">
+                        </div>
+                        <div class="mx-auto">
+                            <button class="btn btn-primary login"><a href="./home.html" class="login">Log
+                                In</a></button>
+                            <p class="heading mt-3">Don't have an account? Sign up <span class="here"
+                                                                                         style="color: rgb(83, 83, 253); font-weight: 800;"><a
+                                    href="./signup.html">
+                                        HERE</a></span></p>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+{% endblock %}

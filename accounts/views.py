@@ -17,20 +17,23 @@ def register(request):
         'company_form': company_form
     }
 
-    return render(request, 'accounts/register.html', context)
+    return render(request, 'accounts/signup.html', context)
 
 
-def register_individual(request):
-    form = CustomUserCreationForm()
+# def register_individual(request):
+#     form = CustomUserCreationForm()
+#
+#     if request.method == 'POST':
+#         form = CustomUserCreationForm(request.POST)
+#
+#         if form.is_valid():
+#             print('valid')
+#             form.save()
+#             messages.success(request, 'Account is successfully created')
+#             return redirect('accounts:register')
+#
+#         messages.error(request, 'Error')
+#         return redirect('accounts:register')
 
-    if request.method == 'POST':
-        form = CustomUserCreationForm(request.POST)
-
-        if form.is_valid():
-            print('valid')
-            form.save()
-            messages.success(request, 'Account is successfully created')
-            return redirect('accounts:register')
-
-        messages.error(request, 'Error')
-        return redirect('accounts:register')
+def login(request):
+    return render(request, 'accounts/login.html')
